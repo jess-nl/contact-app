@@ -1,5 +1,154 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,400,400i,500,500i&display=swap");
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  width: 40%;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: #999896;
+}
+
+.App {
+  background-color: #e3e9ea;
+  color: #72747a;
+  padding: 3rem;
+  height: 100vh;
+}
+
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+  color: #bbc8cd;
+  opacity: 1; /* Firefox */
+}
+
+/* Internet Explorer 10-11 */
+:-ms-input-placeholder {
+  color: #bbc8cd;
+}
+
+/* Microsoft Edge */
+::-ms-input-placeholder {
+  color: #bbc8cd;
+}
+
+.Contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+.Contact input {
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  padding: 1rem;
+  font-size: 0.6em;
+  border: 0;
+  border-bottom: 4px solid #a0bacf;
+  margin-bottom: 1rem;
+}
+
+.Contact input:focus {
+  outline: none;
+}
+
+.Contact button {
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+  width: 100%;
+  background-color: #f8f8f8;
+  border: none;
+  padding: 1rem;
+  color: #5c5e63;
+  font-size: 0.7em;
+}
+
+.Contact button:hover,
+.Contact button:last-child:hover,
+.View button:nth-child(2):hover {
+  background-color: #bcc7d0;
+}
+
+.Contact button:last-child {
+  background-color: #cec9c9;
+}
+
+.View button:nth-child(2) {
+  background-color: #e0dada;
+}
+
+.Contact h1 {
+  font-size: 1.4em;
+  font-weight: 400;
+  padding-bottom: 1rem;
+}
+
+.Contact h1 span {
+  font-weight: 200;
+}
+
+.Contact ul {
+  padding: 0;
+}
+
+.Contact li {
+  list-style: none;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #9d9c9a;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.7em;
+}
+
+.Contact .List h2 {
+  font-size: 5em;
+  font-weight: 100;
+  margin: 0;
+  line-height: 0.6;
+}
+
+.Contact button,
+.Contact .List li,
+.Contact .List h2 {
+  cursor: pointer;
+}
+
+.List li.selectable-contact:hover {
+  background-color: #c4d0d9;
+}
+
+.Contact footer {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    width: 100%;
+  }
+
+  .App {
+    padding: 1.5em;
+  }
+
+  .Contact li {
+    display: block;
+  }
+
+  .Contact li strong {
+    margin-right: 0.5rem;
+    line-height: 2;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 601px) {
+  body {
+    width: 70%;
+  }
 }
