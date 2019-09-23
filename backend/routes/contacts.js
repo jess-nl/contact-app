@@ -1,6 +1,8 @@
 let express = require('express');
 let router = express.Router();
 
+let cors = require("cors");
+
 /* CRUD contacts listing. */
 module.exports = knex => {
   router.get('/', function(req, res, next) {
@@ -15,7 +17,7 @@ module.exports = knex => {
       });
   });
 
-  router.put("/:id", function(req, res, next) {
+  router.put("/:id", cors(), function(req, res, next) {
     knex("contacts")
       .where({ id: req.params.id })
       .update(req.body.contacts)
@@ -25,7 +27,7 @@ module.exports = knex => {
       .catch(error => console.log(error));
   });
 
-  router.post("/", function(req, res, next) {
+  router.post("/", cors(), function(req, res, next) {
     knex("contacts")
       .insert(req.body.contacts, ["id"])
       .then(result => {
@@ -34,7 +36,7 @@ module.exports = knex => {
       .catch(error => console.log(error));
   });
 
-  router.delete("/:id", function(req, res, next) {
+  router.delete("/:id", cors(), function(req, res, next) {
     knex("contacts")
       .where({ id: req.params.id })
       .del()
