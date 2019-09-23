@@ -37,6 +37,7 @@ A user can view a list of contacts. The user can view, edit and delete an existi
 #### Backend
 
 - Navigate to the backend folder (using the `cd backend` command).
+- The backend depends on credentials listed in a .env file (create the file using the `touch .env` command).
 - Install all dependencies (using the `npm install` command).
 - Run the development web server using the `npm run dev` command.
 
