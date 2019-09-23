@@ -14,9 +14,9 @@ export default function App() {
 
   return (
     <div className="App">
-      {/* <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </div> */}
+      <div className="App-header">
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+      </div>
       <h1>List of Contacts</h1>
       <ul>{contactList}</ul>
     </div>
