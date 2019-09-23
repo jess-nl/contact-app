@@ -19,7 +19,7 @@ export default function Create(props) {
     return axios
       .post(`http://localhost:3001/api/contacts/`, { contacts })
       .then(result => {
-        console.log("result:", result);
+        console.log(result);
       })
       .catch(error => {
         console.log(error);

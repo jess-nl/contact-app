@@ -14,13 +14,13 @@ export default function Edit(props) {
   };
   const [contacts, updateContacts] = useState(currentData);
 
-  const handleSubmission = () => {
+  const handleSubmission = function() {
     updateContacts(contacts);
 
     return axios
       .put(`http://localhost:3001/api/contacts/${currentContact.id}`, { contacts })
       .then(result => {
-        console.log("result:", result);
+        console.log(result);
       })
       .catch(error => {
         console.log(error);
@@ -30,7 +30,7 @@ export default function Edit(props) {
   return (
     <div className="Edit">
       <h1>Edit <span>{contacts.first_name}</span></h1>
-      <form onSibmit={handleSubmission}>
+      <form onSubmit={handleSubmission}>
         <input
           placeholder={contacts.first_name}
           onChange={event =>

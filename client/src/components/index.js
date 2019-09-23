@@ -13,7 +13,7 @@ const VIEW = "VIEW";
 const CREATE = "CREATE";
 const EDIT = "EDIT";
 
-export default function Contact(props) {
+export default function Contact() {
   const { mode, transition, back } = useVisualMode(LIST);
   const [currentContact, setCurrentContact] = useState(null);
 
@@ -30,19 +30,18 @@ export default function Contact(props) {
   const deleteCurrentContact = contact => {
     return axios
       .delete(`http://localhost:3001/api/contacts/${contact.id}`)
-      .then(res => {
+      .then(() => {
         transition(LIST);
+      })
+      .catch(error => {
+        console.log(error);
       });
   };
 
   return (
     <div className="Contact">
-      <header>{/* <img src={logo} className="App-logo" alt="logo" /> */}</header>
       {mode === LIST && (
-        <List
-          onCreate={() => transition(CREATE)}
-          onView={viewCurrentContact}
-        />
+        <List onCreate={() => transition(CREATE)} onView={viewCurrentContact} />
       )}
       {mode === VIEW && (
         <View
