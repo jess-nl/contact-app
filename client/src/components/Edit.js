@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+/*
+- Based on provided props (the selected contact), the user can view further details about the current contact via placeholders. 
+- The user can edit the current user via an Axios request.
+- Stretch: Ideally I would have ensured the placeholders were fixed in place even once the user backspaces the input field on a keyboard.
+*/
+
 export default function Edit(props) {
   const { currentContact } = props;
 

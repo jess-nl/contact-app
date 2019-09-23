@@ -1,5 +1,10 @@
 import React from "react";
 
+/*
+- Based on provided props (the selected contact), the user can view further details about the current contact. 
+- The user has the option to edit or delete the current contact.
+*/
+
 export default function View(props) {
   const { currentContact } = props;
 

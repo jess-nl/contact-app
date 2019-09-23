@@ -23,11 +23,11 @@ A user can view a list of contacts. The user can view, edit and delete an existi
 
 !["A list of all available contacts"](https://github.com/jess-nl/contact-app/blob/master/docs/screenshots/contact-list.png)
 
-#### View an existing contact
-!["View contact"](https://github.com/jess-nl/contact-app/blob/master/docs/screenshots/contact-view.png)
+#### View or delete an existing contact
+!["View or delete contact"](https://github.com/jess-nl/contact-app/blob/master/docs/screenshots/contact-view.png)
 
-#### Edit or delete an existing contact
-!["Edit or delete contact"](https://github.com/jess-nl/contact-app/blob/master/docs/screenshots/contact-edit.png)
+#### Edit an existing contact
+!["Edit contact"](https://github.com/jess-nl/contact-app/blob/master/docs/screenshots/contact-edit.png)
 
 #### Create a new contact
 !["Create new contact"](https://github.com/jess-nl/contact-app/blob/master/docs/screenshots/contact-create.png)

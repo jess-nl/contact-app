@@ -1,6 +1,11 @@
 import React from "react";
 import useApplicationData from "../hooks/useApplicationData";
 
+/*
+- Lists all the available contacts.
+- The user has the option to create a new contact or select available contacts.
+*/
+
 export default function List(props) {
   const { state } = useApplicationData();
 

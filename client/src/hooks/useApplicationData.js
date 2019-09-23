@@ -2,6 +2,11 @@ import { useEffect, useReducer } from "react";
 import axios from "axios";
 const SET_CONTACTS = "SET_CONTACTS";
 
+/*
+- A GET request to view all available contacts.
+- This uses hooks which were recently introduced to React. useReducer is an example.
+*/
+
 const contactsReducer = (state, action) => {
   const actions = {
     SET_CONTACTS: {

@@ -1,5 +1,9 @@
 import { useState } from "react";
 
+/*
+This serves as a template to transition between different modes (components).
+*/
+
 export function useVisualMode(val, skip) {
   const [mode, setMode] = useState(val);
   const [history, setHistory] = useState([val]);

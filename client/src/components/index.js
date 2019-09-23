@@ -13,6 +13,12 @@ const VIEW = "VIEW";
 const CREATE = "CREATE";
 const EDIT = "EDIT";
 
+/*
+- Allows for the transition of components via useVisualMode. 
+- The current contact (selected contact) is passed throughout the components. 
+- Sets Axios request for the removal of selected contact.
+*/
+
 export default function Contact() {
   const { mode, transition, back } = useVisualMode(LIST);
   const [currentContact, setCurrentContact] = useState(null);

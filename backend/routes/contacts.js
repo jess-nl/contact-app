@@ -3,7 +3,8 @@ let router = express.Router();
 
 let cors = require("cors");
 
-/* CRUD contacts listing. */
+/* CRUD contact listing. */
+
 module.exports = knex => {
   router.get('/', function(req, res, next) {
     knex

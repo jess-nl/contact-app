@@ -6,7 +6,8 @@ let app = express();
 app.use(cors());
 router.options('*', cors())
 
-/* GET home page. */
+/* GET homepage. */
+
 router.get('/', cors(), function(req, res, next) {
   res.render('index', { title: 'Express' });
 });

@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+/*
+- User can create a new contact, which will update the database via an Axios request.
+- Stretch: Ideally I would have implemented a best practice for redirection to homepage "/".
+*/
+
 export default function Create(props) {
   let currentData = {
     first_name: "",
